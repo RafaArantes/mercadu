@@ -1,0 +1,258 @@
+.discounts, .companies, .categories {
+	float: left;
+	width: 100%;
+	height: auto;
+	padding-bottom: 30px;
+}
+
+h2, h3 {
+	font-family: "Museo500", sans-serif;
+	letter-spacing: 3px;
+	font-size: 36px;
+}
+
+.discounts > .wrapper {
+	float: left;
+	width: calc(100% - 2px);
+	height: auto;
+	min-height: 400px;
+	border: 1px solid #EEE;
+	border-right: none;
+	border-bottom: none;
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.discounts > .wrapper > .product-card {
+	position: relative;
+	float: left;
+	width: calc(20% - 1px);
+	min-height: 400px;
+	padding-bottom: 5%;
+	border-right: 1px solid #EEE;
+	border-bottom: 1px solid #EEE;
+}
+
+.discounts > .wrapper > .product-card > .product-image {
+	float: left;
+	width: 100%;
+	padding-bottom: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.pao {
+	background-image: url(../img/produtos/pullmann-trad-500g.jpg);
+}
+
+.product-card > .product-image > .off-proportion {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #b30664;
+	border-radius: 100%;
+	border: none;
+	left: 15px;
+	top: 15px;
+	color: #FFF;
+}
+
+.discounts > .wrapper > .product-card > .product-name,
+.discounts > .wrapper > .product-card > .true-price,
+.discounts > .wrapper > .product-card > .old-price {
+	float: left;
+	width: 90%;
+	margin: 20px 5%;
+	margin-bottom: 10px;
+}
+
+.discounts > .wrapper > .product-card > .true-price {
+	margin: 10px 5%;
+	margin-bottom: 0px;
+	font-weight: 700;
+	font-size: 30px;
+	color: #b30664;
+}
+
+.discounts > .wrapper > .product-card > .old-price {
+	margin: 5px 5%;
+	margin-bottom: 0px;
+	font-size: 13px;
+	color: #AAA;
+}
+
+.discounts > .wrapper > .product-card > .actions {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 0px;
+	left: 0px;
+}
+
+.product-card > .actions > .remove-item {
+	float: left;
+	width: 24px;
+	height: 24px;
+	border: none;
+	margin-left: 5%;
+	margin-top: 7px;
+	background: #FF5050;
+	border-radius: 4px;
+}
+
+.actions > .remove-item > svg {
+	width: 18px;
+	height: 18px;
+	fill: #FFF;
+}
+
+.product-card > .actions > .to-cart {
+	float: right;
+	padding: 10px;
+	color: #FFF;
+	font-size: 13px;
+	border: none;
+	cursor: pointer;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	background: #b30664;
+	border-radius: 4px;
+}
+
+.discounts .CTA2 {
+	float: left;
+	width: 240px;
+	height: auto;
+	margin-left: calc(50% - 120px);
+	margin-top: 35px;
+	padding: 15px 0px;
+	border-radius: 4px;
+	border: none;
+	background: #b30664;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.categories {
+	width: 85%;
+	height: auto;
+	padding: 40px 7.5%;
+	background: #EEE;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	user-select: none;
+}
+
+.categories .banner {
+	float: left;
+	width: 32.8%;
+	height: 280px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+	overflow: hidden;
+	background: no-repeat center;
+	background-size: cover;
+}
+
+.categories .banner > .title {
+	float: left;
+	clear: both;
+	margin-top: 50px;
+	margin-left: 45px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFF;
+}
+
+.categories .banner > .off {
+	float: left;
+	clear: both;
+	width: 60%;
+	margin-top: 25px;
+	margin-left: 45px;
+	font-size: 42px;
+	font-weight: 700;
+	color: #FFF;
+}
+
+.categories .img1 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/1105325/bbq-meet-eating-diner-1105325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.categories .img2 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/209403/pexels-photo-209403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.categories .img3 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/1324430/pexels-photo-1324430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.categories .img4 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/1693654/pexels-photo-1693654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.categories .img5 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+.categories .img6 {
+	background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+	url(https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+/* Estilos para o Owl Carousel */
+.owl-carousel {
+	float: left;
+	width: calc(100% - 2px);
+	height: auto;
+	margin-top: 20px;
+	padding: 10px 0px;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+
+.owl-carousel > img {
+	float: left;
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 1280px) {
+	.discounts > .wrapper > .product-card {
+		width: calc(25% - 1px);
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.discounts > .wrapper > .product-card {
+		width: calc(50% - 1px);
+		padding-bottom: 10%;
+	}
+
+	.categories {
+		width: 100%;
+		padding: 40px 0%;
+	}
+
+	.categories > .banner {
+		width: 90%;
+		margin: 25px 5%;
+		margin-top: 0px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.discounts > .wrapper > .product-card {
+		width: calc(100% - 1px);
+		padding-bottom: 16%;
+	}
+}

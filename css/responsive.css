@@ -1,0 +1,370 @@
+@media screen and (max-width: 1280px) {
+	header {
+		width: 100%;
+		height: 120px;
+	}
+
+	.first-header, .second-header {
+		width: 90%;
+		padding: 0px 5%;
+	}
+
+	.second-header > a > .wrapper {
+		padding-right: 18px;
+	}
+}
+
+@media screen and (max-width: 1232px) {
+	body {
+		padding-top: 60px;
+	}
+
+	header, .content, .newsletter, .info, .footer-grid {
+		width: 90%;
+		padding: 0px 5%;
+	}
+
+	.content {
+		padding: 25px 5%;
+	}
+
+	header {
+		height: 60px;
+	}
+
+	.first-header {
+		width: 100%;
+		padding: 0px;
+	}
+
+	.profile, .cart {
+		width: 60px;
+	}
+
+	.profile > p, .cart > p {
+		display: none;
+	}
+
+	.start-checkout > .pointer {
+		right: 17px;
+	}
+
+	.second-header {
+		z-index: 3;
+		position: absolute;
+		top: 60px;
+		left: -100%;
+		width: 200px;
+		opacity: 0;
+		height: calc(100vh - 60px);
+		padding: 20px;
+		background: #FFF;
+		overflow-y: auto;
+		border-top: 1px solid #DDD;
+	}
+
+	.menu {
+		display: block;
+	}
+
+	.logo {
+		margin-top: 5px;
+	}
+
+	.searchbox {
+	    float: left;
+	    width: 35%;
+	    margin-left: 5%;
+	}
+
+	.beforeH1, h1, .showcase-cta {
+		margin-left: 5%;
+	}
+
+	.MoreOffers {
+		position: absolute;
+		width: 100%;
+		margin: 0px;
+		border-radius: 0px;
+		left: 0px;
+		bottom: 0px;
+	}
+
+	.MoreOffers > .card > p {
+		margin-top: 30px;
+	}
+
+	.footer-logo {
+		margin-left: 5%;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	h1 {
+		width: 50%;
+	}
+
+	.bannerWrapper, .categories {
+		flex-direction: column;
+	}
+
+	.bannerWrapper > .banner {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	.newsletter {
+		height: auto;
+		padding: 15px 5%;
+	}
+
+	.newsletter > p {
+		width: 100%;
+		margin-top: 0px;
+		text-align: center;
+	}
+
+	.newsletter > div {
+		float: left;
+		width: 70%;
+		margin: 10px 15%;
+	}
+
+	.newsletter > div > input {
+		width: calc(100% - 140px);
+	}
+
+	.footer-logo {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		margin-left: calc(50% - 121px);
+		background-position: center;
+	}
+
+	.footer-grid > .part, .info > .part {
+		width: 50%;
+	}
+
+	.info {
+		float: left;
+		width: 80%;
+		padding: 0px 10%;
+	}
+
+	.footer-grid {
+		width: 80%;
+		padding: 0px 10%;
+	}
+
+	.footer-grid > .part {
+		height: 280px;
+	}
+
+	.large {
+		width: 80vw !important;
+		margin-left: 10vw !important;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	body {
+		padding-top: 120px;
+	}
+
+	header {
+		height: 120px;
+	}
+
+	.searchbox {
+		position: absolute;
+	    width: 100%;
+	    bottom: -56px;
+	    margin: 0px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.start-checkout {
+		right: 2px;
+	}
+
+	.showcase {
+		height: 350px;
+	}
+
+	.MoreOffers, .footer-logo {
+		display: none;
+	}
+
+	.MoreOffers2 {
+		display: block;
+	}
+
+	h1 {
+		width: 90%;
+		font-size: 36px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.darkFrame > .frame {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.frame > .product-modal > .stats {
+		width: 100%;
+	}
+
+	.frame > .product-modal > .description {
+		float: left;
+		width: 100%;
+	}
+
+	.product-modal > .description > .text {
+		margin-bottom: 30px;
+	}
+
+	.product-modal > .quantity-wrapper, .product-modal > .buy {
+		position: static;
+		float: left;
+		width: 100%;
+	}
+
+	.product-modal > .buy {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	header {
+		width: 100%;
+		padding: 0px;
+	}
+
+	.menu {
+		margin-top: 15px;
+		margin-left: 0px;
+		margin-bottom: 0px;
+	}
+
+	.menu > svg {
+		width: 32px;
+		height: 32px;
+	}
+
+	.logo {
+		width: 124px;
+		height: 36px;
+		margin-top: 12px;
+	}
+
+	.profile, .cart {
+		width: 50px;
+	}
+
+	.profile > svg, .cart > svg {
+		margin: 16px 11px;
+	}
+
+	.second-header {
+		width: calc(100% - 40px);
+	}
+
+	.searchbox {
+		width: 95%;
+		margin: 0px 2.5%;
+	}
+
+	.second-header > a > .wrapper {
+		float: left;
+		width: 100%;
+		padding: 0px;
+		margin-left: 0px;
+	}
+
+	.content {
+		width: 95%;
+		padding: 0px 2.5%;
+		padding-top: 25px;
+	}
+
+	.MoreOffers2 {
+		width: 100%;
+		padding: 0px;
+	}
+
+	.MoreOffers2 > .card {
+		float: left;
+		width: calc(100% - 2px);
+		margin-top: 15px;
+	}
+
+	.newsletter > p {
+		font-size: 14px;
+	}
+
+	.newsletter > div {
+		width: 100%;
+		margin: 10px 0px;
+	}
+
+	.newsletter > div > input {
+		width: calc(100% - 30px);
+	}
+
+	.newsletter > div > .send-email {
+		width: 100%;
+		margin: 10px 0px;
+	}
+
+	.info {
+		width: 90%;
+		height: auto;
+		padding: 0px 5%;
+	}
+
+	.footer-grid > .part, .info > .part {
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	.footer-grid > .part {
+		height: auto;
+		margin-top: 30px;
+	}
+
+	.institucional > p {
+		width: 100%;
+	}
+
+	ul {
+		line-height: 2em;
+	}
+
+	.darkFrame > .frame, .darkFrame > .large, .darkFrame > .NeedMoreSpace {
+		width: 100% !important;
+		height: 100% !important;
+		margin-top: 0px !important;
+		margin-left: 0px !important;
+		border-radius: 0px;
+	}
+
+	.frame > .close-modal {
+		top: 10px;
+		right: 10px;
+		z-index: 9999;
+	}
+
+	.frame > .close-modal > svg {
+		fill: #b30664;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.content {
+		padding: 0px 2.5%;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+}

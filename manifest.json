@@ -1,0 +1,17 @@
+{
+  "name": "Mercadu",
+  "short_name": "Mercadu",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "https://www.mercadu.com.br",
+  "background_color": "#800648",
+  "theme_color": "#b30664",
+  "lang": "pt-br", 
+  "description": "Faça suas compras online com segurança e economia.",
+  "icons": [
+    {
+      "src": "img/pwa-assets/logo192.png",
+      "sizes": "192x192"
+    }
+  ]
+}

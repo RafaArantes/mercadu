@@ -118,7 +118,6 @@ h2, h3 {
 	display: flex;
 	flex-flow: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
 }
 
 .discounts > .wrapper > .product-card {

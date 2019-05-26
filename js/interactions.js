@@ -10,7 +10,19 @@ var allButtons = "aside > button";
 /* Seleciona o conteúdo das seções no perfil */
 var ResetSections = ".personal-info, .address-info, .payment-info, .account-info";
 
-
+const openLogin = () => {
+  	$(ResetModal).hide();
+    $(".darkFrame, .login").show();
+}
+const closeModal = () => {
+  $(".darkFrame").hide();
+  $('body').removeClass("block-scrolling");
+  $(".frame").removeClass("NeedMoreSpace");
+  $(".frame").removeClass("large");
+}
+const handleLoading = () => {
+  $('#loading').toggleClass('active')
+}
 /////////////////////////
 // INTERAÇÕES
 /////////////////////////

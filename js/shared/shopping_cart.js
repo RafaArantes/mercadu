@@ -5,6 +5,9 @@ const productClicked = (element, operation) => {
     localStorage.setItem('cart', JSON.stringify(productFindAndReduce(shoppingCart, productId, operation)))
     productCart(JSON.parse(localStorage.getItem('cart')))
 }
+
+const calculateDiscount = (price, discount) => (price - (price * (discount / 100))).toFixed(2)
+
 const productFindAndReduce = (arrayOfProducts, id, operator) => {
     const isNewProduct = arrayOfProducts.findIndex(x => x.id === id) >= 0 ? arrayOfProducts.findIndex(x => x.id === id) : false
     console.log(isNewProduct)
@@ -27,9 +30,10 @@ const remove_product = (id, callback) => {
 }
 
 const productCart = async (cart) => {
-    const products = await Products()
+    const productsToResolve = await get_products()
+    const products = await productsToResolve.json()
     const totals = cart.reduce((x1, x2) => {
-        return x1 + Number(products.find(x => x.id == x2.id).price * cart.find(x => x.id == x2.id).quantity)
+        return x1 + Number(calculateDiscount(products.find(x => x.id == x2.id).price, products.find(x => x.id == x2.id).discount) * cart.find(x => x.id == x2.id).quantity)
     }, 0)
     $('.fullPrice').html('R$ '+totals.toFixed(2))
     $('.cart_products').html('')

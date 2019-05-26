@@ -812,7 +812,7 @@ footer {
 
 .login > input[type="email"],
 .login > input[type="password"],
-#name, #c-email, #c-password,
+#name, #c-name, #c-email, #c-password,
 #confirm-pass {
 	width: calc(100% - 20px);
 	padding: 10px;
@@ -825,7 +825,43 @@ footer {
 	color: #b30664;
 	font-size: 13px;
 }
-
+#loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 38273897;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	justify-content: center;
+	transition: opacity 0.2s ease, margin-top 0.2s ease;
+	align-items: center;
+	background-color: rgba(0, 0, 0,0.3);
+}
+.loading{
+	background-image: url(../img/load.gif);
+	height: 120px;
+	background-size: contain;
+	background-position: center;
+	width: 120px;
+	opacity: 0;
+	margin-top: -200px;
+	transition: opacity 0.2s ease, margin-top 0.2s ease;
+	background-color: #fff;
+	border-radius: 5px;
+}
+#loading.active{
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+.active .loading{
+	margin-top: 0;
+	opacity: 1;
+}
 .confirmLogin, .ConfirmSignUp {
 	position: absolute;
 	left: 0px;

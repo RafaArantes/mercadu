@@ -21,18 +21,16 @@ const product = (product) =>
     `<div class="product-card">
         <div class="product-image"  style="
         background-image: url(${product.img_url});">
-            <button class="off-proportion">
-                ${product.offer ? product.offer : ``}
-            </button>
+        ${product.discount ? '<button class="off-proportion">-' +  product.discount + '%</button>' : ``}
         </div>
         <p class="product-name">
             ${product.name}
         </p>
         <p class="true-price">
-           R$ ${product.price}
+           R$ ${(product.price - (product.price * (product.discount / 100))).toFixed(2)}
         </p>
         <p class="old-price">
-            de R$ ${product.old_price}
+            de R$ ${product.price}
         </p>
 
         <div class="actions">

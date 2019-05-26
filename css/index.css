@@ -21,8 +21,7 @@ h2, h3 {
 	border-bottom: none;
 	margin-top: 30px;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-wrap: wrap; 
 }
 
 .discounts > .wrapper > .product-card {

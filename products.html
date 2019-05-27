@@ -61,19 +61,8 @@
 
 						<p class="list-title">Produtos</p>
 
-						<table class="products">
-						    <tr>
-						        <td class="data name">Produto 1</td>
-						        <td class="data price">R$19.99</td>
-						    </tr>
-						    <tr>
-						        <td class="data name">Produto 2</td>
-						        <td class="data price">R$39.99</td>
-						    </tr>
-						    <tr>
-						        <td class="data name">Pão de forma 1234</td>
-						        <td class="data price">R$9.99</td>
-						    </tr>
+						<table class="products cart_products">
+						   
 						</table>
 
 
@@ -184,14 +173,14 @@
 					</svg>
 
 					<div id="cat-op" class="options">
-						<div class="option">Animais de Estimação</div>
-						<div class="option">Brinquedos</div>
-						<div class="option">Churrasco</div>
-						<div class="option">Doces e Chocolates</div>
-						<div class="option">Frutas</div>
-						<div class="option">Higiene Pessoal</div>
-						<div class="option">Laticínios</div>
-						<div class="option">Sem Lactose</div>
+						<div class="option custom_select_option">Animais de Estimação</div>
+						<div class="option custom_select_option">Brinquedos</div>
+						<div class="option custom_select_option">Churrasco</div>
+						<div class="option custom_select_option">Doces e Chocolates</div>
+						<div class="option custom_select_option">Frutas</div>
+						<div class="option custom_select_option">Higiene Pessoal</div>
+						<div class="option custom_select_option">Laticínios</div>
+						<div class="option custom_select_option">Sem Lactose</div>
 					</div>
 				</div>
 
@@ -201,7 +190,7 @@
 
 				<div id="pricing" class="custom-select">
 					<p class="selected-option">
-						Promoções
+						Todos os produtos
 					</p>
 
 					<svg viewBox="0 0 24 24">
@@ -209,8 +198,8 @@
 					</svg>
 
 					<div id="pricing-type" class="options">
-						<div class="option">Promoções</div>
-						<div class="option">Mais Vendidos</div>
+						<div data-id="discount" class="option custom_select_option">Promoções</div>
+						<div  class="option custom_select_option" data-id="">Todos os produtos</div>
 					</div>
 				</div>
 			</div>
@@ -338,6 +327,10 @@
 	</div>
 </footer>
 
+
+<div id="loading" class="active">
+	<div class="loading"></div>
+</div>
 <section class="darkFrame">
 	<div class="frame">
 		<button class="close-modal">
@@ -445,11 +438,20 @@
 
 </body>
 </html>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	String.prototype.capitalize = function() {
+			return this.charAt(0).toUpperCase() + this.slice(1);
+	}
+	
+	
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
 <script type="text/javascript" src="js/interactions.js"></script>
 <script type="text/javascript" src="js/requests.js"></script>
+<script type="text/javascript" src="js/shared/user.js"></script>
 <script type="text/javascript" src="js/dom_elements/index.js"></script>
+<script type="text/javascript" src="js/dom_elements/products.js"></script>
 <script type="text/javascript" src="js/products.js"></script>
 <script type="text/javascript" src="js/shared/shopping_cart.js"></script>
 <script type="text/javascript" src="js/mock.js"></script>

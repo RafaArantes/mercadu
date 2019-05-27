@@ -61,19 +61,8 @@
 
 						<p class="list-title">Produtos</p>
 
-						<table class="products">
-						    <tr>
-						        <td class="data name">Produto 1</td>
-						        <td class="data price">R$19.99</td>
-						    </tr>
-						    <tr>
-						        <td class="data name">Produto 2</td>
-						        <td class="data price">R$39.99</td>
-						    </tr>
-						    <tr>
-						        <td class="data name">Pão de forma 1234</td>
-						        <td class="data price">R$9.99</td>
-						    </tr>
+						<table class="products cart_products">
+						   
 						</table>
 
 						<p class="more-products">e + 12 outros produtos...</p>
@@ -247,12 +236,12 @@
         </div>
 
         <div class="credit-card-list">
-          <div class="credit-card-entry active">
+          <div class="credit-card-entry active" id="1">
             <div class="flag visa"></div>
             <p class="title">1111 2222 3333 4444</p>
           </div>
 
-          <div class="credit-card-entry">
+          <div class="credit-card-entry" id="2">
             <div class="flag mastercard"></div>
             <p class="title">1111 2222 3333 4444</p>
           </div>
@@ -372,7 +361,11 @@
 	</div>
 	</footer>
 
-	<section class="darkFrame">
+	
+<div id="loading">
+	<div class="loading"></div>
+</div>
+<section class="darkFrame">
 	<div class="frame">
 		<button class="close-modal">
 			<svg viewBox="0 0 24 24">
@@ -450,8 +443,10 @@
 </html>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 <script type="text/javascript" src="js/interactions.js"></script>
 <script type="text/javascript" src="js/requests.js"></script>
+<script type="text/javascript" src="js/shared/user.js"></script>
 <script type="text/javascript" src="js/dom_elements/index.js"></script>
 <script type="text/javascript" src="js/dom_elements/checkout.js"></script>
 <script type="text/javascript" src="js/checkout.js"></script>

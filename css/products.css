@@ -135,8 +135,8 @@ h2, h3 {
 	width: 100%;
 	padding-bottom: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-position: center; 
+	background-size: 220px;
 	cursor: help;
 }
 

@@ -39,7 +39,7 @@ const productCart = async (cart) => {
     $('.cart_products').html('')
     cart.forEach(x =>{
         const productInfo = products.find(product => product.id == x.id)
-        const product = {price: 'R$ '+(x.quantity * productInfo.price).toFixed(2), name: productInfo.name}
+        const product = {price: 'R$ '+(x.quantity * calculateDiscount(productInfo.price, productInfo.discount)).toFixed(2), name: productInfo.name}
         $('.cart_products').append(shopping_cart(product))
     })
 }

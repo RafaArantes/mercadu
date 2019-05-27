@@ -4,6 +4,11 @@ const cart = (product) =>
         <td class="data price">${product.price}</td>
     </tr>
     `
+const counter_banner = (category, index) => 
+    `<div class="banner img${index+1}">
+        <p class="title">${category.category}</p>
+        <p class="off">+ de <span id="carne">${category.counter}</span> Produtos</p>
+    </div>`    
 const offer = (offer) => 
     `<div id="${offerId}" class="card">
         <div class="pic"></div>

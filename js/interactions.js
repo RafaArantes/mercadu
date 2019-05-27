@@ -38,11 +38,6 @@ $(document).ready(function(){
     productCart(JSON.parse(localStorage.getItem('cart')))
   });
 
-  $(".profile").click(function(){
-  	$(ResetModal).hide();
-    $(".darkFrame, .login").show();
-  });
-
   $(".product-image").click(function(){
   	$(ResetModal).hide();
     $('body').addClass("block-scrolling");
@@ -139,11 +134,4 @@ $(document).ready(function(){
     $(".boleto-list").show();
   });
 
-  $("#finish").click(function(){
-  	$(ResetModal).hide();
-    $('body').addClass("block-scrolling");
-    $(".frame").removeClass("NeedMoreSpace");
-    $(".frame").removeClass("large");
-    $(".darkFrame, .buyingComplete").show();
-  });
 });

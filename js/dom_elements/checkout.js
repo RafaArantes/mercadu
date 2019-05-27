@@ -1,5 +1,5 @@
 const deliver_addresses = (address) => 
-    `<div class="address-card ${address.default_address ? 'active' : ''}">
+    `<div class="address-card ${address.default_address ? 'active' : ''}" id='${address.id}'>
           <p class="title">${address.address} ${address.number}</p>
           <p class="description">
             ${address.default_address ? 'Esse é seu endereço padrão' : 'Este é um de seus endereços'}

@@ -16,7 +16,7 @@ const success_modal = callback => {
 
 const error_modal = (callback, text) => {
   Swal.fire({
-    title: "Error!",
+    title: "Erro!",
     text,
     type: "error",
     confirmButtonText: "Continuar",
@@ -24,12 +24,13 @@ const error_modal = (callback, text) => {
   });
 };
 
-const queryParametrify = params =>
-  Object.keys(params).reduce(
+const queryParametrify = params =>{
+  if(typeof params == `string`) return params
+  return Object.keys(params).reduce(
     (x1, x2, index) => x1 + x2 + `=` + Object.values(params)[index] + `&`,
     `?`
   );
-
+}
 const register_card_in_gateway = card => {
   // return fetch(GATEWAY_URI+'/register/card', {method:'POST', headers: {Authorization: BEARER_TOKEN}, body: JSON.stringify(card)})
   return {
@@ -77,6 +78,14 @@ const get_profile = () =>
     method: "GET",
     headers: { Authorization: BEARER_TOKEN }
   });
+
+
+const get_categories = () =>
+  fetch(SERVER_URI + "/categories", {
+    method: "GET",
+    headers: { Authorization: BEARER_TOKEN }
+  });
+
 
 const update_profile = update =>
   fetch(SERVER_URI + "/users/" + update.id, {
@@ -165,5 +174,11 @@ const get_cards = user =>
 const delete_card = cardId =>
   fetch(SERVER_URI + "/cards/" + cardId, {
     method: "DELETE",
+    headers: { Authorization: BEARER_TOKEN }
+  });
+
+const get_products_count_with_params = (params) => 
+  fetch(SERVER_URI + "/products/count" + (params ? queryParametrify(params) : ""), {
+    method: "GET",
     headers: { Authorization: BEARER_TOKEN }
   });

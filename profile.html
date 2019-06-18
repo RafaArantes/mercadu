@@ -172,7 +172,7 @@
           Endereços de Entrega
         </span>
       </button>
-      <button id="showPaymentInfo">
+      <button style="display:none"id="showPaymentInfo">
         <svg viewBox="0 0 24 24">
             <path d="M21,8V6H7V8H21M21,16V11H7V16H21M21,4A2,2 0 0,1 23,6V16A2,2 0 0,1 21,18H7C5.89,18 5,17.1 5,16V6C5,4.89 5.89,4 7,4H21M3,20H18V22H3A2,2 0 0,1 1,20V9H3V20Z" />
         </svg>
@@ -208,7 +208,8 @@
       <div class="address-info">
         <div class="currentAddress">
           <h3>Endereços Registrados</h3>
-          <div class="address-card active">
+					<div id="add_holder">
+					<div class="address-card">
             <p class="title">Casa</p>
             <p class="description">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -243,7 +244,7 @@
               </div>
             </div>
           </div>
-
+					</div>
           <button class="addButton" id="create-new-address">
             + Cadastrar Endereço
           </button>
@@ -464,7 +465,7 @@
 </footer>
 
 
-<div id="loading">
+<div id="loading" class="active white">
 	<div class="loading"></div>
 </div>
 <section class="darkFrame">
@@ -533,8 +534,14 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="thirdParty/OwlCarousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="js/owl-start.js"></script>
+<script type="text/javascript" src="js/shared/user.js"></script>
 <script type="text/javascript" src="js/interactions.js"></script>
 <script type="text/javascript" src="js/dom_elements/index.js"></script>
+<script type="text/javascript" src="js/dom_elements/profile.js"></script>
+<script type="text/javascript" src="js/requests.js"></script>
+<script type="text/javascript" src="js/profile.js"></script>
+<script type="text/javascript" src="js/shared/category_menu.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/shared/address.js"></script>
 <script type="text/javascript" src="js/shared/shopping_cart.js"></script>
 <script type="text/javascript" src="js/mock.js"></script>

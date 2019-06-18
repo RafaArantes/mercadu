@@ -1,6 +1,11 @@
 /////////////////////////
 // VARIÁVEIS
 /////////////////////////
+
+	String.prototype.capitalize = function() {
+			return this.charAt(0).toUpperCase() + this.slice(1);
+	}
+
 /* Seleciona o conteúdo dos modais */
 var ResetModal = ".login, .cadastro, .product-modal";
 
@@ -20,8 +25,15 @@ const closeModal = () => {
   $(".frame").removeClass("NeedMoreSpace");
   $(".frame").removeClass("large");
 }
-const handleLoading = () => {
-  $('#loading').toggleClass('active')
+const handleLoading = (white) => {
+  const loadingDiv = $('#loading')
+  loadingDiv.hasClass('active') 
+    ? setTimeout(() => loadingDiv.removeClass('active'), 500)
+    : loadingDiv.addClass('active') 
+  
+    white ? loadingDiv.addClass('white') : loadingDiv.removeClass('white')
+  
+
 }
 /////////////////////////
 // INTERAÇÕES

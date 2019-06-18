@@ -1,5 +1,4 @@
-const customSelectPopulator = async () => {
-    const categories = await (await get_categories()).json()
+const customSelectPopulator = async (categories) => {
     $(`#cat-op`).html(``)
     $(`#cat-op`).append(`<div class="option custom_select_option" data-id="">Todos</div>`)
     categories.forEach(category => $(`#cat-op`).append(custom_select({placeholder: category.category.capitalize(), name: category.category, id: category.id})))
@@ -14,6 +13,11 @@ const productPopulator = async (products) => {
 const bannerPopulator = banners => {
     const bannerMapped = banners.map(ban => $(`.bannerWrapper`).append(banner(ban)))
 }
+
+const counterPopulator = (counter, index) => {
+    $(`.categories`).append(counter_banner(counter,index))
+}
+
 const customSelectHandler = (selectWrapper, elementClicked) => {
     const value = $(elementClicked).html()
     const id = $(elementClicked).attr(`data-id`)
@@ -41,12 +45,16 @@ const productSort = () => {
 }
 
 $(async function() {
-    customSelectPopulator()
     handleLogin()
+    const categories = await (await get_categories()).json()
+    customSelectPopulator(categories)
     productPopulator(await get_products(window.location.search))
     bannerPopulator(await Offers(3))
     productCart(JSON.parse(localStorage.getItem('cart')))
-    handleLoading()
+    handleLoading(true)
+    
+    const counters = await Promise.all(categories.map(async x => await (await get_products_count_with_params({category: x.id})).json()))
+    categories.slice(0,6).map((x, index) => counterPopulator({...x, counter: counters[index]}, index))
     $(`body`).on(`click`, `.custom_select_option`, function(){
         customSelectHandler($(this).parent().parent(), this)
     })

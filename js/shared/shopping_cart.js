@@ -1,6 +1,12 @@
 const productClicked = (element, operation) => {
     const productId = $(element).attr('id')
-    !$('.start-checkout').hasClass('active') && $('.start-checkout').addClass('active')
+    const isOnCart = localStorage.getItem('cart') && JSON.parse(localStorage.getItem('cart')).find(product => product.id == productId) ? true : false
+    if(operation == `remove`){
+        isOnCart && (!$('.start-checkout').hasClass('active') && $('.start-checkout').addClass('active'))
+    } else {
+        !$('.start-checkout').hasClass('active') && $('.start-checkout').addClass('active')
+    }
+    
     const shoppingCart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
     localStorage.setItem('cart', JSON.stringify(productFindAndReduce(shoppingCart, productId, operation)))
     productCart(JSON.parse(localStorage.getItem('cart')))
@@ -10,7 +16,6 @@ const calculateDiscount = (price, discount) => (price - (price * (discount / 100
 
 const productFindAndReduce = (arrayOfProducts, id, operator) => {
     const isNewProduct = arrayOfProducts.findIndex(x => x.id === id) >= 0 ? arrayOfProducts.findIndex(x => x.id === id) : false
-    console.log(isNewProduct)
     const productTreater =  isNewProduct !== false ? arrayOfProducts.find(x => x.id === id) : operator !== 'add' ? false : {id: id, quantity: 1}
     if(!productTreater) return arrayOfProducts
     const refine = () => {

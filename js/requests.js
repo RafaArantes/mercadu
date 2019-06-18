@@ -4,6 +4,10 @@ BEARER_TOKEN = localStorage.getItem("jwt")
   ? "Bearer " + localStorage.getItem("jwt")
   : "";
 
+
+function redirecter (url) {
+  window.location.href = `/products?category=`+url
+}  
 const success_modal = callback => {
   Swal.fire({
     title: "Successo!",
@@ -124,7 +128,7 @@ const register_address = (
   city,
   number,
   default_address,
-  user
+  user, callback
 ) => {
   const address = {
     cep: cep,
@@ -135,11 +139,17 @@ const register_address = (
     default_address: default_address,
     user: user
   };
+  console.log(address)
   return fetch(SERVER_URI + "/addresses", {
     method: "POST",
-    headers: { Authorization: BEARER_TOKEN },
+    headers: { 
+      Authorization: BEARER_TOKEN,
+      "Content-Type": "application/json" },
     body: JSON.stringify(address)
-  });
+  }).then(x => {
+    console.log('acabou o post', callback)
+    callback && callback()
+  })
 };
 
 const get_address = params =>

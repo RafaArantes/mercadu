@@ -5,7 +5,7 @@ const cart = (product) =>
     </tr>
     `
 const counter_banner = (category, index) => 
-    `<div class="banner img${index+1}">
+    `<div onclick="redirecter('${category.id}')" class="banner img${index+1}">
         <p class="title">${category.category}</p>
         <p class="off">+ de <span id="carne">${category.counter}</span> Produtos</p>
     </div>`    
@@ -15,7 +15,13 @@ const offer = (offer) =>
         <p>${offer}</p>
     </div>
     `
- 
+const menu_item = (item) => 
+    `<a href="${item.id ? '/products?category='+item.id : '/products'}">
+        <div class="wrapper">
+            <div class="wpic" style="background-image: url(${item.id ? SERVER_URI : ''}${item.icon.url}); ${item.style && item.style}"></div>
+            <p>${item.category.capitalize()}</p>
+        </div>
+    </a>`
 const banner = (banner) =>
     `<div class="banner" style="background-image: url(${banner.img_url})">
         <p class="title">${banner.cta}</p>

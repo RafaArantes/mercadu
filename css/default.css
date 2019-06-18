@@ -493,7 +493,9 @@ h1 {
 	font-size: 14px;
 	font-weight: 600;
 }
-
+.banner{
+	cursor: pointer;
+}
 .bannerWrapper {
 	float: left;
 	width: 100%;
@@ -507,6 +509,7 @@ h1 {
 
 .bannerWrapper .banner {
 	float: left;
+	cursor: pointer;
 	width: 32%;
 	height: 160px;
 	background-color: #EEE;
@@ -841,6 +844,9 @@ footer {
 	align-items: center;
 	background-color: rgba(0, 0, 0,0.3);
 }
+#loading.white{
+	background-color: #fff;
+}
 .loading{
 	background-image: url(../img/load.gif);
 	height: 120px;
@@ -857,9 +863,11 @@ footer {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: all;
+	transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 .active .loading{
 	margin-top: 0;
+	transition: opacity 0.2s ease, margin-top 0.2s ease;
 	opacity: 1;
 }
 .confirmLogin, .ConfirmSignUp {
